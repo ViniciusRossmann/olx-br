@@ -1,16 +1,21 @@
 {
   "name": "olx-br",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Pacote de integração com a api da OLX Brasil.",
+  "main": "/src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "tsc"
+    "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vinícius Rossmann Nunes",
   "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^16.7.6",
     "typescript": "^4.4.2"
   }
 }
