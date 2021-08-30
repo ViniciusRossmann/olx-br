@@ -1,5 +1,5 @@
 import axios from 'axios';
-const GET_TOKEN_URL = 'https://auth.olx.com.br/oauth/token';
+const GET_TOKEN_URL = 'https://auth.olx.com.br/';
 const API_URL = 'https://apps.olx.com.br/';
 
 export const authApi = axios.create({
