@@ -1,15 +1,15 @@
 {
   "name": "olx-br",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Pacote de integração com a api da OLX Brasil.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
-  "keywords": [],
+  "keywords": ["OLX", "OLX Brasil"],
   "author": "Vinícius Rossmann Nunes",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1"
   },
