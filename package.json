@@ -1,6 +1,6 @@
 {
   "name": "olx-br",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pacote de integração com a api da OLX Brasil.",
   "main": "dist/index.js",
   "scripts": {
