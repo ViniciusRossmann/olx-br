@@ -1,6 +1,6 @@
 {
   "name": "olx-br",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Pacote de integração com a api da OLX Brasil.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,5 +17,10 @@
     "@types/axios": "^0.14.0",
     "@types/node": "^16.7.6",
     "typescript": "^4.4.2"
+  },
+  "homepage": "https://github.com/ViniciusRossmann/olx-br",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViniciusRossmann/olx-br.git"
   }
 }
