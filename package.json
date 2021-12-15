@@ -1,26 +1,27 @@
 {
-  "name": "olx-br",
-  "version": "1.0.5",
-  "description": "Pacote de integração com a api da OLX Brasil.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc"
-  },
-  "keywords": ["OLX", "OLX Brasil"],
-  "author": "Vinícius Rossmann Nunes",
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^0.21.1"
-  },
-  "devDependencies": {
-    "@types/axios": "^0.14.0",
-    "@types/node": "^16.7.6",
-    "typescript": "^4.4.2"
-  },
-  "homepage": "https://github.com/ViniciusRossmann/olx-br",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ViniciusRossmann/olx-br.git"
-  }
+    "name": "olx-br",
+    "version": "1.0.6",
+    "description": "Pacote de integração com a api da OLX Brasil.",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "test": "ts-node-dev src/teste.ts"
+    },
+    "keywords": ["OLX", "OLX Brasil"],
+    "author": "Vinícius Rossmann Nunes",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.21.1"
+    },
+    "devDependencies": {
+        "@types/axios": "^0.14.0",
+        "@types/node": "^16.7.6",
+        "typescript": "^4.4.2"
+    },
+    "homepage": "https://github.com/ViniciusRossmann/olx-br",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ViniciusRossmann/olx-br.git"
+    }
 }

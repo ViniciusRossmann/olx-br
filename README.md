@@ -14,6 +14,7 @@ npm i olx-br
 import Olx from 'olx-br';
 const olx = new Olx(client_id, client_secret, redirect_uri);
 ```
+Observação: só é necessário instanciar classe para os métodos 'getAuthUrl' e 'getToken', os demais são estáticos.
 
 ## Utilização
 
@@ -21,39 +22,22 @@ Para correta compreensão dos métodos, é necessário conhecer o funcionamento 
 
 ```javascript
 //obter token de acesso de usuário 
-olx.getToken(code, (err, res) => { /* 'code' é obtido no processo de autenticação, saiba mais em https://github.com/olxbr/ad_integration/blob/master/api/oauth.md */
-  if (err) console.warn(err);
-  else {
-    const access_token = res.access_token;
-  }
-});
+const access_token = await olx.getToken(code);
 
 //publicar um novo anúncio
 const anuncio = { "subject": "Peça de carro em ótimo estado", ... } /* veja a estrutura completa de um anuncio em https://github.com/olxbr/ad_integration/blob/master/api/import.md */
-olx.putAnuncios(access_token, [anuncio], (err, res) => {
-  if (err) console.warn(err);
-  else {
-    if (res.statusCode == 0) { //anuncio foi importado e será processado
-      const token_anuncio = res.token; //token usado para buscar o status do anuncio
-    }
-  }
-});
+const res = await Olx.putAnuncios(access_token, [anuncio]);
+if (res.statusCode == 0) { //anuncio foi importado e será processado
+  const token_anuncio = res.token; //token usado para buscar o status do anuncio
+}
 
 //obter status da publicação de um anúncio
-olx.getStatusAnuncio(access_token, token_anuncio, (err, res) => {
-  if (err) console.warn(err);
-  else {
-    const status = res.status; // valores possíveis: pending, error, queued, accepted, refused
-  }
-});
+const res = await Olx.getStatusAnuncio(access_token, token_anuncio);
+const status = res.status;
 
 //obter a lista de anúncios ativos do usuário
-olx.getAnuncios(access_token, (err, res) => {
-  if (err) console.warn(err);
-  else {
-    const anuncios_ativos = res;
-  }
-});
+const anuncios = await Olx.getAnuncios(access_token); 
+
 ```
 A lista completa de métodos pode ser vista [aqui](https://github.com/ViniciusRossmann/olx-br/blob/main/src/index.ts).
 
